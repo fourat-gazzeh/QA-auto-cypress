@@ -45,36 +45,29 @@ def ask_lm_studio(query, top_k=10):
     context = "\n\n".join(selected_chunks)
 
     prompt = f"""
-You are a frontend assistant trained to understand structured metadata chunks from UI pages.
-
-The context consists of short text chunks describing:
-- Pages and their descriptions.
-- UI flows and step information (e.g., flow name, step name, step id).
-- UI elements (e.g., input fields, buttons) with label, type, selector, and required info.
-
-🚫 DO NOT hallucinate or infer structure like JSON or nested objects.
-✅ Only use the actual chunks given — treat them as ground truth.
-✅ When asked about a step, use the chunk that mentions the step name or step ID, and list the UI elements (inputs, buttons) that appear **after it** until the next step or page info chunk.
-
---- CHUNKS START ---
+Context:
 {context}
---- CHUNKS END ---
 
-Now answer the following question based on the above chunks only:
+Instructions:
+- Only use information from the context above.
+- Do not make up new UI elements or flows.
+- Return clean, structured text based on the real chunks.
 
 Question: {query}
 Answer:
 """
 
     payload = {
-        "model": MODEL_NAME,
-        "messages": [
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.7,
-        "stream": False
-    }
-
+    "model": MODEL_NAME,
+    "messages": [
+        {"role": "system", "content": "You are a helpful assistant trained to reason about UI metadata from JSON-like chunks. Be concise, precise, and do not hallucinate."},
+        {"role": "user", "content": prompt}
+    ],
+    "temperature": 0.7,
+    "max_tokens": 1024,
+    "stream": False
+}
+    
     try:
         response = requests.post(LM_STUDIO_API, json=payload)
         response.raise_for_status()
