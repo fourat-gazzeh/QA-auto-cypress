@@ -1,0 +1,78 @@
+{
+  "page_info": {
+    "name": "Market Order - Instrument Selection",
+    "description": "This page allows users to select an instrument for a market order. It presents a form with an instrument finder and displays non-editable fields related to the selected instrument.",
+    "url_path": "",
+    "flow": {
+      "name": "unitair_market_order",
+      "step_id": 1,
+      "step_name": "Instrument Selection"
+    }
+  },
+  "elements": [
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Instrument",
+      "id": "mat-input-20",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger mat-mdc-autocomplete-trigger ellipsis-input ng-tns-c508571215-97 finder-input ng-untouched ng-pristine ng-invalid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": true,
+      "behavior": "Allows searching/finding an instrument.",
+      "cypress_selector": "input#mat-input-20"
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": null,
+      "id": null,
+      "name": null,
+      "class": "ng-tns-c508571215-97",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Triggers a search for the instrument (likely opens a dropdown or performs an API request).",
+      "cypress_selector": "button[mat-icon-button]"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Libell\u00e9 abr\u00e9g\u00e9",
+      "id": "mat-input-21",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger input-overflow ng-tns-c508571215-99 ng-untouched ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Displays the abbreviated label of the instrument. (Read-only)",
+      "cypress_selector": "input#mat-input-21"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Libell\u00e9",
+      "id": "mat-input-22",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger input-overflow ng-tns-c508571215-100 ng-untouched ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Displays the label of the instrument. (Read-only)",
+      "cypress_selector": "input#mat-input-22"
+    },
+    {
+      "tag": "button",
+      "type": null,
+      "lable": "Suivant",
+      "id": null,
+      "name": null,
+      "class": "vg-btn vg-xlarge-btn vg-primary-btn ng-star-inserted",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Navigates to the next step in the order process.",
+      "cypress_selector": "button:contains('Suivant')"
+    }
+  ],
+  "scenarios": [
+    "✅ User types a valid instrument name into the 'Instrument' input field, selects the correct instrument from the autocomplete suggestions. The 'Suivant' button becomes enabled.",
+    "❌ User leaves the 'Instrument' field empty or types an invalid instrument name. The 'Suivant' button remains disabled, preventing the user from proceeding."
+  ]
+}

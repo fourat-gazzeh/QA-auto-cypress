@@ -1,0 +1,210 @@
+{
+  "page_info": {
+    "name": "Market Order - Form Filling",
+    "description": "This page allows users to create and manage market orders. It includes sections for selecting instruments, defining order details through a dynamic form, and specifying portfolio ventilation. The form is likely used to input and confirm the details of a trade order before it's executed.",
+    "url_path": "",
+    "flow": {
+      "name": "unitair_market_order",
+      "step_id": 2,
+      "step_name": "Order Form Details"
+    }
+  },
+  "elements": [
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": "Editer",
+      "id": null,
+      "name": null,
+      "class": "btn btn-hover button-circle",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Opens the section for editing.",
+      "cypress_selector": "button[title=\"Editer\"]"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Instrument",
+      "id": "mat-input-20",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger mat-mdc-autocomplete-trigger ellipsis-input ng-tns-c508571215-97 finder-input ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored ng-touched",
+      "placeholder": null,
+      "required": true,
+      "behavior": "Selects an instrument for the market order.",
+      "cypress_selector": "input#mat-input-20"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Libell\u00e9 abr\u00e9g\u00e9",
+      "id": "mat-input-21",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger input-overflow ng-tns-c508571215-99 ng-untouched ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Displays the abbreviated label of selected instrument.",
+      "cypress_selector": "input#mat-input-21"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Libell\u00e9",
+      "id": "mat-input-22",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger input-overflow ng-tns-c508571215-100 ng-untouched ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Displays the label of selected instrument",
+      "cypress_selector": "input#mat-input-22"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Valeur",
+      "id": "mat-input-32",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger input-overflow ng-tns-c508571215-143 ng-untouched ng-pristine mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Value field, type is not specified",
+      "cypress_selector": "input#mat-input-32"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Courtier",
+      "id": "mat-input-33",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger mat-mdc-autocomplete-trigger ellipsis-input ng-tns-c508571215-144 finder-input ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects a broker.",
+      "cypress_selector": "input#mat-input-33"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "D\u00e9positaire",
+      "id": "mat-input-34",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger mat-mdc-autocomplete-trigger ellipsis-input ng-tns-c508571215-146 finder-input ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects a depository.",
+      "cypress_selector": "input#mat-input-34"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Date de l'ordre",
+      "id": "mat-input-35",
+      "name": null,
+      "class": "mat-mdc-input-element ng-tns-c508571215-148 ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects the order date from a calendar.",
+      "cypress_selector": "input#mat-input-35"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Date valeur",
+      "id": "mat-input-36",
+      "name": null,
+      "class": "mat-mdc-input-element ng-tns-c508571215-149 ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects the value date from a calendar.",
+      "cypress_selector": "input#mat-input-36"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Contrepartie",
+      "id": "mat-input-37",
+      "name": null,
+      "class": "mat-mdc-input-element mat-mdc-tooltip-trigger mat-mdc-autocomplete-trigger ellipsis-input ng-tns-c508571215-152 finder-input ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects a counterparty.",
+      "cypress_selector": "input#mat-input-37"
+    },
+    {
+      "tag": "input",
+      "type": "string",
+      "lable": "Prix",
+      "id": "mat-input-38",
+      "name": null,
+      "class": "mat-mdc-input-element ng-tns-c508571215-154 ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Enter the price.",
+      "cypress_selector": "input#mat-input-38"
+    },
+    {
+      "tag": "input",
+      "type": "text",
+      "lable": "Date d'expiration",
+      "id": "mat-input-39",
+      "name": null,
+      "class": "mat-mdc-input-element ng-tns-c508571215-156 ng-untouched ng-pristine ng-valid mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Selects the expiration date from a calendar.",
+      "cypress_selector": "input#mat-input-39"
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": "Ajouter une ligne",
+      "id": null,
+      "name": null,
+      "class": "vg-btn vg-large-btn vg-primary-btn",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Adds a new row to the portfolio ventilation table.",
+      "cypress_selector": "button:contains('Ajouter une ligne')"
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": "Annuler",
+      "id": null,
+      "name": null,
+      "class": "vg-btn vg-xlarge-btn vg-secondary-btn floatingCancel",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Cancels the market order creation/edition.",
+      "cypress_selector": "button:contains('Annuler')"
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": " Valider ",
+      "id": null,
+      "name": null,
+      "class": "vg-btn vg-xlarge-btn vg-primary-btn refresh-btn",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Validates the entered market order data.",
+      "cypress_selector": "button:contains(' Valider ')"
+    },
+    {
+      "tag": "button",
+      "type": "button",
+      "lable": "Confirmer",
+      "id": null,
+      "name": null,
+      "class": "vg-btn vg-xlarge-btn vg-primary-btn floatingValidate",
+      "placeholder": null,
+      "required": false,
+      "behavior": "Confirms the market order.",
+      "cypress_selector": "button:contains('Confirmer')"
+    }
+  ],
+  "scenarios": [
+    "✅ A user successfully creates a market order by selecting an instrument, filling in all the required fields in the dynamic form (like order date, value date, counterparty, and price), and allocating the order to different portfolios with specified quantities. The user then validates and confirms the order.",
+    "❌ A user attempts to create a market order without selecting an instrument or enters invalid data into required fields, such as an incorrect date format or a negative price. The system should display appropriate validation errors, preventing the user from proceeding until the errors are corrected."
+  ]
+}
